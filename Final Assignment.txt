@@ -1,0 +1,86 @@
+1) Define the class in order to meet the following needs
+
+a) MyClass m1;
+b) MyClass m2(40,56.29f);
+c) m1.display(m2);
+d) MyClass m3("hello world");
+e) MyClass m4=m3;
+f) int k=MyClass().show();
+
+
+/*1) Define the class in order to meet the following needs
+
+a) MyClass m1;
+b) MyClass m2(40,56.29f);
+c) m1.display(m2);
+d) MyClass m3("hello world");
+e) MyClass m4=m3;
+f) int k=MyClass().show();
+*/
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+	class MyClass
+	{
+	private:
+		int number;
+		float number1;
+		char *message;
+	public:
+		MyClass(int number,float number1)
+		{
+			this->number=number;
+			this->number1=number1;
+			cout<<"In Parameterized Constructor"<<endl;
+		}
+		MyClass(MyClass &ref)
+		{
+			cout<<"In Copy Constructor"<<endl;
+		}
+		MyClass(char *ptr)
+		{
+			this->message=new char[strlen(ptr)+1];
+			strcpy(message,ptr);
+			cout<<"In Parameterized Constructor character"<<endl;
+		}
+		~MyClass()
+		{
+			cout<<"In Destructor"<<endl;
+			delete message;
+		}
+		MyClass()
+		{
+			cout<<"In Default Constructor"<<endl;
+		}
+		void show()
+		{
+			cout<<"Integer Number"<<number;
+			//cout<<"Float Number"<<number1;
+		}
+		void display(MyClass &ref)
+		{
+			cout<<"I am called from object"<<endl;
+		}
+	};
+	void main()
+	{
+		 MyClass m1;
+		 MyClass m2(40,56.29);
+		m1.display(m2);
+		 MyClass m3("hello world");
+		 MyClass m4=m3;
+		//int k=MyClass().show();
+		getche();
+	}
+
+5) create a library ( mathematics.lib ) 
+in this library create a class "Math"
+In this class define three functions
+a) to accept number and return double of it.
+b) to accept a number and return square of it.
+c) to accept a number ,if it is negative, return positive of it.
+
+make sure that while calling all these functions, client need not create an instance of "Math" class.
+	write application to access "Math" class and all its functions.
+

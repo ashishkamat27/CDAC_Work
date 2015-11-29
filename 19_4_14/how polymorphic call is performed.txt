@@ -1,0 +1,68 @@
+base b;
+
+base *ptr=&b;
+
+ptr->disp1();  // base disp1
+	a) content of ptr
+	b) access vptr in that object
+	c) invoke  vptr+0 function
+
+ptr->disp2();  // base disp2
+	a) content of ptr
+	b) access vptr in that object
+	c) invoke  vptr+1 function
+
+sub s;
+
+ptr=&s;
+
+ptr->disp1();  // base disp1
+	a) content of ptr
+	b) access vptr in that object
+	c) invoke  vptr+0 function
+
+ptr->disp2(); // base disp2
+	a) content of ptr
+	b) access vptr in that object
+	c) invoke  vptr+1 function
+
+virtual table stores following information
+
+a) virtual functions
+b) virtual destructor
+c) who am I
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

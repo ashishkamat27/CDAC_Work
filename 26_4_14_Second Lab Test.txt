@@ -1,0 +1,16 @@
+1)create a class “Module” with “void start()” pure virtual function.
+Create 3 child classes of it  “Java”, “Cplusplus”  and “DotNet”.
+In main function , create array of pointer to “,Module” class ( 3 elements )
+Store all the child classes instances in this array.
+Now traverse the array and call “start()” function of Cplusplus only.
+
+
+2)Create a base class Storage_Device. Declare pure virtual function “void save()” in it. 			
+Define following sub classes for this class.                                                 A) PenDrive  b) CD  c) HD		                                       	
+	Define a global function “perform” which will accept “Storage_Device’s reference as an argument. Inside this method u will check , if  “Storage_Device” contains “HD”, then only u will call “save()” method. 
+( RTTI).
+				From main function , try calling display function by passing all the child instances one by one.
+
+
+3)write a class template , which can take only two generic types.
+define getSize() method in this class template, which will display the total size of arguments passed.

@@ -1,0 +1,39 @@
+inline functions
+
+	syntax
+
+	inline void disp()
+	{
+		//code
+	}
+
+
+in case of normal functions, when function is called, 
+a) control goes to function body
+b) execution of function body
+c) return the control back to caller.
+
+
+in case of inline functions, when function is called,
+	entire function body is placed at the place where it is called.
+This is done at compile time. So the advantage is, execution is faster.
+But again it depends upon compiler to compiler. If the code is large or contains some recursive statement/s, compiler may treat your function as normal function. Hence, keyword "inline" is just a request and not a command.
+
+inline  vs  macros
+
+1) inline replacement is done at compile time whereas macro replacement is at preprocessing time.
+2) compiler may not treat your function as inline, if it contains large code or recursive statements. macros are always get replaced ,irrespective of their content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

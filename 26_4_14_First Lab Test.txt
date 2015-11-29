@@ -1,0 +1,16 @@
+1)create a class “Employee” with “void calcsalary()” pure virtual function.
+Create 3 child classes of it  “Officer”, “Clerk”  and “Manager”.
+In main function , create array of pointer to “,Employee” class ( 3 elements )
+Store all the child classes instances in this array.
+Now traverse the array and call “calcsalary()” function of Clerk only.
+
+
+2)Create a base class Electronic_Appliance. Declare pure virtual function “void on()” in it. 			
+Define following sub classes for this class.                                                 A) PC  b) TV  c) Iron		                                       	
+	Define a global function “perform_on” which will accept “Electronic_Appliance’s pointer as an argument. Inside this method u will check , if  “Electronic_Appliance” contains “PC”, then only u will call “on()” method. 
+( RTTI).
+				From main function , try calling display function by passing all the child instances one by one.
+
+
+3)write a class template , which can take only one generic type.
+define add() method in this class template, which will accept two values , add them and display the result.

@@ -1,0 +1,18 @@
+class base // abstract class
+{
+	public:
+		virtual void disp1()=0;
+		virtual void disp2(){}
+		void disp3(){}
+};
+class sub:public base
+{
+	public:
+		void disp1(){}
+};
+int main()
+{
+	sub s;
+	s.disp1(); s.disp2();  s.disp3();
+}
+		

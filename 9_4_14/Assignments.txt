@@ -1,0 +1,21 @@
+1)write a function which will return reference of structure.
+( note:- any structure of ur choice u can define )
+
+2)write a function which takes 3 arguments
+variable, pointer and a reference.(any datatype)
+invoke this function and show how "call by value","call by address" and "call by reference" will work.
+3)define 2 functions
+a) function which accepts another function as an argument
+( using pointer to function )
+b) function which accepts another function as an argument
+( using reference to function )
+	try to invoke both the functions and display the output.
+4)accept 2 numbers and swap them using references.
+
+5)accept 2 names and swap them using references.
+
+6) create a library in c in which,
+write a function which will accept 2 numbers and return the difference between 2 numbers
+write appropriate header file.
+
+write c++ client code to access this library.

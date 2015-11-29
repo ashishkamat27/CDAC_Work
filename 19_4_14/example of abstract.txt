@@ -1,0 +1,118 @@
+class Shape // abstract
+{
+	public:
+		virtual void draw()=0; // pure virtual function or Do-Nothing function
+		
+};
+class Triangle:public Shape
+{
+	public:
+		void draw()
+		{
+			triangle draw
+		}
+};
+class Rect:public Shape
+{
+	public:
+		void draw()
+		{
+			Rect draw
+		}
+};
+class Polygon:public Shape
+{
+	public:
+		void draw()
+		{
+			Poly draw
+		}
+};
+class Arc:public Shape
+{
+	public:
+		void draw()
+		{
+			Arc draw
+		}
+}
+
+void perform(Shape *s)
+{
+	s->draw();
+}
+	or
+void perform(Shape &s)
+{
+	s.draw();
+}
+
+int main()
+{
+	perform(new Rect);
+
+	perform(new Triangle);
+
+	perform(new Polygon);
+
+	perform(new Arc);
+		or
+Rect r; Triangle t; Polygon p; Arc a;
+
+	perform(r);
+
+	perform(t);
+
+	perform(p);
+
+	perform(a);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

@@ -1,0 +1,40 @@
+1) create a library to define following class
+class MyClass
+{
+ int num;
+\\ here
+}
+
+client of this library should do following
+
+MyClass m1(200);
+cout<<m1.getNum();
+MyClass m2=m1;
+MyClass m3;
+m3.setNum(400);
+m3=m1+m2;
+cout<<m3.getNum();
+if(m2==m3)
+{
+cout<<"equal";
+}
+else
+{
+cout<<"not equal";
+}
+
+
+
+2)create a class "Book" with
+int bookid
+char *bookname
+int price
+
+define parameterized constructor only for this class.
+define 3 getter functions.
+
+now create 2 instances
+1 on stack and 1 on heap.
+pass the necessary values while creating instances.
+call the getter functions.
+

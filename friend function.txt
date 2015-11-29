@@ -1,0 +1,142 @@
+Q.1)
+
+1) class Group1
+   {
+	char *name;
+	int total;
+
+	// constructors and member functions
+   }
+in main function create 2 groups with name and total marks.
+now write a friend function,which will compare total of 2 groups and display the result.
+
+
+Ans:-
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+ class Group1
+   {
+   private:
+	char *name;
+	int total;
+
+   public:
+	Group1(char *ptr,int total)
+	{
+		this->name=new char[strlen(ptr)+1];
+		strcpy(name,ptr);
+		this->total=total;
+	}
+	friend void display(Group1 &,Group1 &);
+   };
+  void display(Group1 &ref,Group1 &ref1)
+  {
+	 int total1=ref.total;
+	  int total2=ref1.total;
+	 // cout<<total1<<total2;
+	  if(total1>total2)
+	  {
+		  cout<<ref.name<<"Scored More";
+	  }
+	  cout<<ref1.name<<"Scored More";
+  }
+ void main()
+ {
+	 Group1 g("ashish",13);
+	 Group1 g1("avinash",21);
+	 display(g,g1);
+	getche();
+ }
+
+
+
+
+
+
+____________________________________________________________________________________________
+
+Q.2)
+
+
+class First
+{
+	int a;
+};
+class Second
+{
+	public:
+		void fun1(){}
+		void fun2(){}
+		void fun3(){}
+};
+
+Above code is incomplete.
+Make sure that all the member functions of "Second" will access "a".
+
+
+Ans:-
+
+
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class second;
+class first
+{
+	private:
+		int a;
+	public:
+		void disp1()
+		{
+			cout<<a<<endl;
+		}
+		first (int a)
+		{
+			this->a=a;
+		}
+friend class second;
+};
+class second
+{
+private:
+		int b;
+public:
+		void disp2()
+		{
+			cout<<b;
+		}
+		second(int b)
+		{
+			this->b=b;
+		}
+		void fun1(first &ref)
+		{
+			cout<<ref.a<<endl;
+		}
+		void fun2(first &ref)
+		{
+			cout<<ref.a<<endl;
+		}
+		void fun3(first &ref)
+		{
+			cout<<ref.a<<endl;
+		}
+};
+void main()
+{
+	first m1(100);
+	second m2(200);
+	m1.disp1();
+	m2.disp2();
+	m2.fun1(m1);
+	m2.fun2(m1);
+	m2.fun3(m1);
+	getch();
+}
+
+

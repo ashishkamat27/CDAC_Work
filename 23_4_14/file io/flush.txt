@@ -1,0 +1,7 @@
+flush()
+
+when output is performed,data is not immediately written to the physical device linked to the stream. instead information is stored in an internal buffer untill the buffer is full.Only then are the contents of that buffer written to disk.However you can force the information to be physically written to disk before the buffer is full by calling flush().
+
+
+
+closing a file or terminating a program also flushes all buffers.

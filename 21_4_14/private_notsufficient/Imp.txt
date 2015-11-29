@@ -1,0 +1,6 @@
+using private variables isn't a 100% reliable way to enforce encapsulation.
+
+The private data members and such access specifier only enforce the access permissions on compile time, and not on run time. In run time the memory address space is not protected by these constructs, and if you get the address location right, then you can access it directly (by the same process).
+
+To access the private member of a class directly from outside of the class in C++, we need to know the definition of the class. The idea is to get the address of the private data member location and directly access the memory location through pointers.
+

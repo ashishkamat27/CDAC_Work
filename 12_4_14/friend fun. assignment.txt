@@ -1,0 +1,27 @@
+1) class Group1
+   {
+	char *name;
+	int total;
+
+	// constructors and member functions
+   }
+in main function create 2 groups with name and total marks.
+now write a friend function,which will compare total of 2 groups and display the result.
+
+2) 
+class First
+{
+	int a;
+};
+class Second
+{
+	public:
+		void fun1(){}
+		void fun2(){}
+		void fun3(){}
+};
+
+Above code is incomplete.
+Make sure that all the member functions of "Second" will access "a".
+
+

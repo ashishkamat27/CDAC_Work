@@ -1,0 +1,9 @@
+abstract class
+
+in c++ the moment u declare at least one pure virtual function inside the class, it becomes abstract class.
+
+abstract class can not be instantiated, but a pointer or reference of abstract class can be created ( for late binding purpose)
+
+abstract class can contain pure virtual , virtual or non-virtual functions.
+
+child class of abstract class has to define pure virtual function which is declared in the parent class.

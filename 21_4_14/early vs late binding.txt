@@ -1,0 +1,11 @@
+Early vs. Late binding
+Early binding refers to events that occur at compile time. e.g. normal function calls,overloading of functions and operator.
+The main advantage to early binding is efficiency.Because all information necessary to call a function is determined at compile time,these types of function calls are very fast.
+
+late binding refers to function calls that are not resolved untill runtime.virtual functions are used to achieve late binding.The object and the function are not linked untill runtime. The main advantage of late binding is flexibility.
+ However because a function call is not resolved untill runtime,late binding can make for somewhat slower execution times.
+
+
+
+
+

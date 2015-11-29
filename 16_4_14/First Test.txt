@@ -1,0 +1,109 @@
+1) class sample
+   {
+	// here 
+    };
+
+
+void main()
+{
+	sample s1;
+	sample s2(30,60);
+	sample s3("abc","xyz");
+	sample::myfun();
+	s1.fun1();
+}
+
+2) class sample
+   {
+	private:
+		char ch;
+	public:
+		sample(char ch)
+		{
+			this->ch=ch;
+		}
+  };
+
+given above class.
+
+write a global function "display" which will access "ch" directly and display it.
+call this function from main function.
+
+3) class sample3
+   {
+        private:
+		int num;
+	public:
+		sample3()
+		{
+		}
+		sample3(int k)
+		{
+		}
+		sample3(char *ptr,float f)
+		{
+		}
+		sample3(int a,int b)
+		{
+		}
+   };
+
+given above class, create 6 instances according to following requirement.
+
+a) create an instance on heap which will call "no-arg" constructor.
+b) create an instance on stack which will call "two int argument" constructor
+c) create an instance on heap which will call "string and float" arguments constructor.
+d) create an instance on heap which will call "two int argument" constructor
+e) create an instance on stack which will pass only one int.
+f) create an instance on stack which will call "string and float" arguments constructor
+
+4) Given
+
+class Module1
+{
+	int duration;
+	public:
+		Module1(int k)
+		{
+			duration=k;
+		}
+};
+
+class Module2
+{
+	int duration;
+	public:
+		Module2(int k)
+		{
+			duration=k;
+		}
+};		
+	
+write a global function "check" which will take 2 modules (i.e. Module1 and Module2 ) and check whether Modules are same or not.
+call this "check" function from main function.	
+
+
+5)  Make necessary changes in "One" and "Two" according to the statements given in main function.
+
+class One
+{
+	public:
+		// here
+};
+class Two
+{
+	public:
+		//here
+};
+
+void main()
+{
+	One o(100,200);
+	int k=One::myfun1();
+	Two t('a');
+	t.fun2(o);
+	One o1(40);
+	cout<<o+o1<<endl;
+	char ch=t;
+	cout<<ch<<endl; 
+}	

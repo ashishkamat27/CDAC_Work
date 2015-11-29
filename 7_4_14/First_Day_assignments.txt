@@ -1,0 +1,36 @@
+1) using cin and cout, accept name,address,age of a person and print it.
+
+2) write a function which can accept minimum 3 characters and maximum 5 characters and display them.
+
+3) create following structure
+struct book
+{
+	char bid[5];
+	char name[30];
+	int price;
+};
+ask user how many records he wants to create and accordingly allocate memory.
+accept values from user and display.
+( Hint :-  use  "new" operator)
+
+4)define 3 different structures and initialize their members.
+now write 3 different functions,but with the same name.
+these functions will accept each structure respectively and display their members.
+
+5) define a function "int sqr(int);
+create a pointer pointing to this function. now using pointer invoke this function.
+
+6) given int arr[5]={10,20,30,40,50}
+now write a function which can collect this array. inside function display all the elements.
+
+7) define a function , in which create int array of 5, initialize it. now return this array from a function , collect it inside the main function and display the elements.
+
+8) create a static library in c in which,
+write a function which will accept 2 numbers and return the difference between 2 numbers
+write appropriate header file.
+
+write c client code to access this library.
+
+
+
+

@@ -1,0 +1,39 @@
+1) create a library to define following class
+class Sample
+{
+ int data
+\\ here
+}
+
+client of this library should do following
+
+Sample s1(200);
+cout<<m1.getData();
+Sample s2=s1;
+Sample s3;
+s3.setData(400);
+if(s2==s3)
+{
+cout<<"equal";
+}
+else
+{
+cout<<"not equal";
+}
+cout<<Sample::getCount()<<endl; // count of how many instances are created
+
+
+
+2)create a class "Employee" with
+int id
+char *empname
+int age
+
+define parameterized constructor only for this class.
+define 3 getter functions.
+
+now create 2 instances
+1 on stack and 1 on heap.
+pass the necessary values while creating instances.
+call the getter functions.
+

@@ -1,0 +1,61 @@
+Let's take one real life example of a TV, which you can turn on and off, change the channel, adjust the volume, and add external components such as speakers, VCRs, and DVD players, BUT you do not know its internal details, that is, you do not know how it receives signals over the air or through a cable, how it translates them, and finally displays them on the screen.
+
+Lets take an example to understand abstraction. A Laptop consists of many things such as processor, motherboard, RAM, keyboard, LCD screen, wireless antena, web camera, usb ports, battery, speakers etc. To use it, you don't need to know how internally LCD screens, keyboard, web camera, battery, wireless antena, speakers works.  You just need to know how to operate the laptop by switching it on. The intrinsic details are invisitble. 
+
+ Real world Example of Abstraction: - 
+Suppose you have an object Mobile Phone.
+
+Suppose you have 3 mobile phones as following:-
+
+Nokia 1400 (Features:- Calling, SMS)
+Nokia 2700 (Features:- Calling, SMS, FM Radio, MP3, Camera)
+Black Berry (Features:-Calling, SMS, FM Radio, MP3, Camera, Video Recording, Reading E-mails)
+
+Abstract information (Necessary and Common Information) for the object "Mobile Phone" is make a call to any number and can send SMS."
+
+so that, for mobile phone object you will have abstract class like following:-
+
+    abstract class MobilePhone
+    {
+        public void Calling();
+        public void SendSMS();
+    }
+
+    public class Nokia1400 : MobilePhone
+    {
+
+    }
+
+    public class Nokia2700 : MobilePhone
+    {
+        public void FMRadio();
+        public void MP3();
+        public void Camera();
+    }
+
+    public class BlackBerry : MobilePhone
+    {
+        public void FMRadio();
+        public void MP3();
+        public void Camera();
+        public void Recording();
+        public void ReadAndSendEmails();
+
+    }
+
+
+
+For example a car in itself is a well-defined object, which is composed of several other smaller objects like a gearing system, steering mechanism, engine, which are again have their own subsystems. But for humans car is a one single object, which can be managed by the help of its subsystems, even if their inner details are unknown.
+
+Examples of "abstractions" on a PC include video input, printers, audio input and output, block devices (e.g. hard disk drives or USB flash drive), etc.
+
+
+
+
+
+
+
+
+
+
+

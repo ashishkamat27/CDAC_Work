@@ -1,0 +1,161 @@
+1) create a class with constructors and destructors.
+create array of instances and observe how program behaves.
+
+#include<iostream>
+using namespace std;
+#include<conio.h>
+class MyClass
+{
+	private:	
+			int num;
+	public:	
+		void setNum(int k)
+			{
+			this->num=k;
+			}
+		int getNum()
+		{
+			return num;
+		}
+		MyClass()
+		{
+			cout<<"In Constructor"<<endl;
+		}
+		~MyClass()
+		{
+			
+			cout<<"In Dessructor\n";
+		
+		}
+		
+
+};
+
+		
+void main()
+{
+	MyClass m[3];  // Array of object of MyClass
+	int i,num;
+	cout<<"enter different values\n";
+	for(i=0;i<3;i++)
+	{
+		cin>>num;
+		m[i].setNum(num);
+	}
+	for(i=0;i<3;i++)
+	{
+	cout<<endl<<m[i].getNum()<<endl;
+	}
+	getche();
+}
+
+
+
+2) create a class with constructors and destructor.
+create 2 instances on stack and 1 instance on heap. 
+observe the invocation of constructors and destructors.
+
+#include<iostream>
+using namespace std;
+#include<conio.h>
+class MyClass
+{
+	private:	
+			int num;
+	public:	
+		
+		MyClass()
+		{
+			cout<<"In Constructor"<<endl;
+		}
+		~MyClass()
+		{
+			
+			cout<<"In Desructor\n";
+		
+		}
+		
+
+};
+
+		
+void main()
+{
+	MyClass m;  // Array of object of MyClass
+	MyClass *s2=new MyClass;
+	delete s2;
+	getche();
+}
+
+
+3) create a class "book" with
+int bookid
+char *bookname
+int price
+
+define parameterized constructor only for this class.
+define 3 getter functions.
+
+now create 2 instances
+1 on stack and 1 on heap.
+pass the necessary values while creating instances.
+call the getter functions.
+
+
+
+#include<iostream>
+using namespace std;
+#include<conio.h>
+class book
+{
+	private:	
+			int bookid;
+			char *bookname;
+			int price;
+
+	public:	
+		
+		int getbookid()
+		{
+			return bookid;
+		}
+		char getbookname()
+		{
+			return *bookname;
+		}
+		int getprice()
+		{
+			return price;
+		}
+		book(int bookid,char *bookname,int price)
+		{
+			this->bookid=bookid;
+			this->bookname=new char[strlen(bookname)+1];
+			this->price=price;
+			
+
+		}
+		~book()
+		{
+			
+			delete bookname;
+		
+		}
+		
+
+};
+		
+void main()
+{
+	book b1(10,"Database",100);
+	book *b2=new book(20,"OS",200);
+	cout<<b1.getbookid();
+	cout<<b1.getbookname();
+	cout<<b1.getprice();
+	/*b2.getbookid();
+	b2.getbookname();
+	b2.getprice();
+	delete b2;*/
+	getche();
+}
+

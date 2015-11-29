@@ -1,0 +1,83 @@
+1)
+class base
+{
+	public:
+		base(char *ptr)
+		{
+		}
+};
+class sub:public base
+{
+};
+
+Following statements should be possible
+
+sub s;
+
+sub *s1=new sub(40);
+
+sub *s2=new sub('a',4.5);
+
+2)
+class base1
+{
+	int num1;
+};
+class base2
+{
+	int num2;
+};
+class sub:public base1,base2
+{
+	int num3;
+};
+
+above classes are incomplete.
+You should be able to do following
+
+sub *s=new sub; (num1,num2 and num3 should be 0)
+
+sub s1(10,20,30); (num1,num2 and num3 should be 10,20 and 30 respectively)
+
+sub *s2=new sub(50,60); (num1,num2 and num3 should be 50,60 and 70 respectively)
+
+3) 
+class parent
+{
+	public:
+		disp1()
+		disp2()
+		disp3()
+		disp4()
+};
+class sub:private parent
+{
+	public:
+		disp5()
+};
+
+make sure u can do the following
+
+sub s(30);
+s.disp5();
+s.disp3();
+s.disp1();
+
+4) 
+class course
+{
+	//here
+};
+class DacCourse:public course
+{
+	// here
+};
+
+you should be able to say following
+
+course *c=new course;
+c->fees(); // course version should be called
+c=new DacCourse;
+c->fees();  // DacCourse version should be called
+
+
